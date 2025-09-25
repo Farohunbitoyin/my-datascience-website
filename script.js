@@ -95,3 +95,21 @@ window.addEventListener('load', revealOnScroll)
 document.getElementById('back-to-top')?.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 })
+
+// =======================
+// Read More toggle for projects
+// =======================
+document.querySelectorAll('.read-more-btn').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const projectCard = btn.closest('.project-card')
+    const moreText = projectCard.querySelector('.more-text')
+
+    if (moreText.style.display === 'inline') {
+      moreText.style.display = 'none'
+      btn.textContent = 'Read More'
+    } else {
+      moreText.style.display = 'inline'
+      btn.textContent = 'Read Less'
+    }
+  })
+})
