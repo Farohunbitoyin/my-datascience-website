@@ -6,7 +6,7 @@ function scrollToSection(sectionId) {
 }
 
 // =======================
-// Highlight active nav link on scroll
+// Highlight active nav link on scroll + Navbar shrink + Back-to-top
 // =======================
 window.addEventListener('scroll', () => {
   let sections = document.querySelectorAll('section')
@@ -92,9 +92,15 @@ window.addEventListener('load', revealOnScroll)
 // =======================
 // Back-to-top button click
 // =======================
-document.getElementById('back-to-top')?.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' })
-})
+const backToTopBtn = document.getElementById('back-to-top')
+if (backToTopBtn) {
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  })
+}
 
 // =======================
 // Read More toggle for projects

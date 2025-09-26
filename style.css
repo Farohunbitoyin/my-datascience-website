@@ -73,14 +73,14 @@ nav ul li a:hover {
   nav ul {
     position: absolute;
     top: 60px;
-    right: 0; /* align to right */
+    right: 0;
     width: 200px;
     flex-direction: column;
     background: #0a1a2f;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
-    border-left: 2px solid #ff6b35; /* optional accent */
+    border-left: 2px solid #ff6b35;
   }
 
   nav ul.active {
@@ -317,26 +317,31 @@ section.visible,
   transform: translateY(0);
 }
 
+/* ====== Back to Top button (Neon style) ====== */
 #back-to-top {
   position: fixed;
-  bottom: 40px;
+  bottom: 30px;
   right: 30px;
-  background: #ff6b35;
-  color: #fff;
+  display: none;
+  background: #00ffaa; /* Neon green */
+  color: #0a0f1c; /* Dark text */
   border: none;
-  padding: 12px 15px;
   border-radius: 50%;
+  width: 45px;
+  height: 45px;
   cursor: pointer;
   font-size: 18px;
-  display: none;
-  z-index: 1500;
-  transition: opacity 0.3s ease;
+  box-shadow: 0px 0px 10px #00ffaa, 0px 0px 20px #00ffaa;
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
 #back-to-top.show {
   display: block;
+  opacity: 1;
 }
 #back-to-top:hover {
-  background: #2563eb;
+  box-shadow: 0px 0px 15px #00ffaa, 0px 0px 30px #22d3ee;
+  transform: scale(1.1);
 }
 
 /* Profile Picture Styling */
@@ -378,14 +383,14 @@ section.visible,
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
-    top: 60px; /* just below navbar */
-    right: 20px; /* align with hamburger on the right */
-    background: #1f2937; /* dark background so items are visible */
+    top: 60px;
+    right: 20px;
+    background: #1f2937;
     padding: 15px;
     border-radius: 8px;
-    width: 200px; /* fixed width for menu */
+    width: 200px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 1000; /* make sure it sits above hero/bg */
+    z-index: 1000;
   }
 
   .nav-links.active {
@@ -393,9 +398,9 @@ section.visible,
   }
 
   .nav-links a {
-    color: #ffffff !important; /* ensure links contrast with dark background */
+    color: #ffffff !important;
     padding: 10px;
-    text-align: right; /* align text to the right */
+    text-align: right;
     width: 100%;
   }
 
