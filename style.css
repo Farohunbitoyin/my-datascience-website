@@ -450,3 +450,27 @@ section.visible,
   background: #2563eb;
   border-color: #10b981;
 }
+
+/* ====== Project Links (GitHub, etc.) ====== */
+.project-links {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.project-links .btn-link {
+  display: inline-block;
+  background: #0f172a;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #2563eb;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.project-links .btn-link:hover {
+  background: #2563eb;
+  border-color: #10b981;
+}
